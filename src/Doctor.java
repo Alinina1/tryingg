@@ -14,6 +14,10 @@ public class Doctor {
         return a;
     }
 
+    public void minusSick(){
+        numberOfCured--;
+    }
+
     public Doctor(String name,  String illness) {
         this.name = name;
         this.illness = illness;

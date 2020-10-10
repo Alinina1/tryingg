@@ -1,16 +1,19 @@
 public class Patient {
     private String name;
-    public String sick;
-    public boolean policy;
-    public int arrivalTimeH;
-    public int arrivalTimeM;
+    private String sick;
+    private Integer policy;
 
-    public Patient(String name, boolean policy, String sick, int hours, int minutes) {
+    public Patient(String name, Integer policy, String sick) {
         this.name = name;
         this.policy = policy;
         this.sick = sick;
-        this.arrivalTimeH = hours;
-        this.arrivalTimeM = minutes;
     }
 
+    public Integer getPolicy() {
+        return policy;
+    }
+
+    public String getSick() {
+        return sick;
+    }
 }

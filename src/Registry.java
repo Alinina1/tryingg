@@ -1,15 +1,16 @@
 public class Registry {
     public static void main(String[] args) {
-        Doctor doctor1 = new Doctor("Евгений", "хирургия","перелом");
-        Doctor doctor2 = new Doctor("Варвара","стоматология","зубы");
-        Doctor doctor3 = new Doctor("Эвелина","гинекология","пизда");
+        Surgeon doctor1 = new Surgeon("Евгений","перелом");
+        Dental doctor2 = new Dental("Варвара","зубы");
+        Otolaryngologist doctor3 = new Otolaryngologist("Эвелина","горло");
 
         Director director = new Director();
 
-        Patient patient1 = new Patient("Серега", true,"зубы",13,20);
-        Patient patient2 = new Patient("Кирилл",false,"глаза",10,00);
+        Patient patient1 = new Patient("Серега", 1488,"зубы");
+        Patient patient2 = new Patient("Кирилл",null,"глаза");
 
         doctor2.treatment(patient1);
+        
         director.givPrize(doctor2);
     }
 }

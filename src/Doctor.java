@@ -1,24 +1,32 @@
-public final class Doctor {
-    public String name;
-    private String speciality;
-    private String illness;
-    public int numberOfCured; // количество вылеченных пациентов
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class Doctor {
+    protected String name;
+    protected String illness;
+    protected int numberOfCured; // количество вылеченных пациентов
 
 
-    public Doctor(String name,  String speciality, String illness) {
+    private int getHour(){
+        Date d = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("kk");
+        int a =Integer.parseInt(f.format(d));
+        return a;
+    }
+
+    public Doctor(String name,  String illness) {
         this.name = name;
-        this.speciality = speciality;
         this.illness = illness;
         this.numberOfCured = 0;
     }
 
 
     public void treatment(Patient patient){
-        if (patient.policy == false)
+        if (patient.getPolicy() == null)
             System.out.println("Пациент идет в жопу, т.к. нет полиса");
-        else if (patient.sick != this.illness)
+        else if (patient.getSick() != this.illness)
             System.out.println("Пациент идет в жопу, т.к. пршел не к тому доктору");
-        else if (patient.arrivalTimeH>=13 && patient.arrivalTimeH<=14)
+        else if (getHour()>=13 && getHour() <=14 )
             System.out.println("Пациент идет в жопу, т.к. пиршел во время обеда");
         else {
             System.out.println("Пациент вылечен!");

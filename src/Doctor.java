@@ -15,7 +15,7 @@ public class Doctor {
     }
 
     public void minusSick(){
-        numberOfCured--;
+        numberOfCured = 0;
     }
 
     public Doctor(String name,  String illness) {

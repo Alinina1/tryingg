@@ -10,7 +10,7 @@ public class Registry {
         Patient patient2 = new Patient("Кирилл",null,"глаза");
 
         doctor2.treatment(patient1);
-
+        doctor2.treatment(patient1);
         director.givPrize(doctor2);
 
         director.givPrize(doctor2);
